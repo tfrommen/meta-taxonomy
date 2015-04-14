@@ -1,0 +1,151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Meta Taxonomy v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-04-14 20:15:58+0000\n"
+"Last-Translator: Thorsten Frommen <tf@ipm-frommen.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: inc/Model/Taxonomy.php:59
+#@ meta-taxonomy
+msgctxt "Taxonomy general name"
+msgid "Metas"
+msgstr "Metas"
+
+#: inc/Model/Taxonomy.php:60
+#@ meta-taxonomy
+msgctxt "Taxonomy singular name"
+msgid "Meta"
+msgstr "Meta"
+
+#: inc/Model/Taxonomy.php:61
+#@ meta-taxonomy
+msgctxt "Taxonomy menu name"
+msgid "Metas"
+msgstr "Metas"
+
+#: inc/Model/Taxonomy.php:62
+#@ meta-taxonomy
+msgid "All Metas"
+msgstr "Alle Metas"
+
+#: inc/Model/Taxonomy.php:63
+#@ meta-taxonomy
+msgid "Edit Meta"
+msgstr "Meta bearbeiten"
+
+#: inc/Model/Taxonomy.php:64
+#@ meta-taxonomy
+msgid "View Meta"
+msgstr "Meta ansehen"
+
+#: inc/Model/Taxonomy.php:65
+#@ meta-taxonomy
+msgid "Update Meta"
+msgstr "Meta aktualisieren"
+
+#: inc/Model/Taxonomy.php:66
+#@ meta-taxonomy
+msgid "Add New Meta"
+msgstr "Neues Meta erstellen"
+
+#: inc/Model/Taxonomy.php:67
+#@ meta-taxonomy
+msgid "New Meta Name"
+msgstr "Neuer Metaname"
+
+#: inc/Model/Taxonomy.php:68
+#@ meta-taxonomy
+msgid "Parent Meta"
+msgstr "Übergeordnetes Meta"
+
+#: inc/Model/Taxonomy.php:69
+#@ meta-taxonomy
+msgid "Parent Meta:"
+msgstr "Übergeordnetes Meta:"
+
+#: inc/Model/Taxonomy.php:70
+#@ meta-taxonomy
+msgid "Search Metas"
+msgstr "Metas suchen"
+
+#: inc/Model/Taxonomy.php:71
+#@ meta-taxonomy
+msgid "Popular Metas"
+msgstr "Beliebte Metas"
+
+#: inc/Model/Taxonomy.php:72
+#@ meta-taxonomy
+msgid "Separate metas with commas"
+msgstr "Trenne Metas durch Kommas"
+
+#: inc/Model/Taxonomy.php:73
+#@ meta-taxonomy
+msgid "Add or remove metas"
+msgstr "Metas hinzufügen oder entfernen"
+
+#: inc/Model/Taxonomy.php:74
+#@ meta-taxonomy
+msgid "Choose from the most used metas"
+msgstr "Wähle aus den häufig genutzten Metas"
+
+#: inc/Model/Taxonomy.php:75
+#@ meta-taxonomy
+msgid "No metas found."
+msgstr "Keine Metas gefunden."
+
+#: inc/Model/Taxonomy.php:85
+#@ meta-taxonomy
+msgid "This taxonomy provides a high-performance means to query posts in a somewhat meta-based way."
+msgstr "Diese Taxonomie stellt ein höchst performantes Mittel dar, um Beiträge auf eine halbwegs metabasierte Art abzufragen."
+
+#. translators: plugin header field 'Name'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "Meta Taxonomy"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "https://github.com/tfrommen/meta-taxonomy"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way."
+msgstr "Registriert eine Taxonomie, die ein höchst performantes Mittel darstellt, um Beiträge auf eine halbwegs metabasierte Art abzufragen."
+
+#. translators: plugin header field 'Author'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "Thorsten Frommen"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "http://ipm-frommen.de/wordpress"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: meta-taxonomy.php:0
+#@ meta-taxonomy
+msgid "1.0"
+msgstr ""
+
