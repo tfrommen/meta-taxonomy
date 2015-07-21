@@ -27,7 +27,7 @@ If you want to alter a specific taxonomy argument but you can't find a fitting f
 
 ```php
 /**
- * Customize the meta taxonomy's args.
+ * Filter the meta taxonomy's args.
  *
  * @param array $args Taxonomy args.
  */
@@ -46,7 +46,7 @@ This filter provides you with the the capabilities required for the four taxonom
 
 ```php
 /**
- * Customize the meta taxonomy's capabilities.
+ * Filter the meta taxonomy's capabilities.
  *
  * @param array $capabilities Taxonomy capabilities.
  */
@@ -65,7 +65,7 @@ If you want to alter the taxonomy description, feel free to do it via this filte
 
 ```php
 /**
- * Customize the meta taxonomy's description.
+ * Filter the meta taxonomy's description.
  *
  * @param string $description Taxonomy description.
  */
@@ -82,7 +82,7 @@ In case you don't like the labels, easily adapt them to your liking.
 
 ```php
 /**
- * Customize the meta taxonomy's labels.
+ * Filter the meta taxonomy's labels.
  *
  * @param array $labels Taxonomy labels.
  */
@@ -101,7 +101,7 @@ Yes, you can also alter the taxonomy name (slug).
 
 ```php
 /**
- * Customize the meta taxonomy's name.
+ * Filter the meta taxonomy's name.
  *
  * @param string $name Taxonomy name.
  */
@@ -118,7 +118,7 @@ By default, the meta taxonomy is registered for default posts (i.e., post type `
 
 ```php
 /**
- * Customize the meta taxonomy's object type.
+ * Filter the meta taxonomy's object type.
  *
  * @param string|array $object_type Taxonomy object type.
  */
@@ -151,3 +151,7 @@ if ( has_meta_term( get_the_ID(), 'popular' ) ) {
 If you have a feature request, or if you have developed the feature already, please feel free to use the Issues and/or Pull Requests section.
 
 Of course, you can also provide me with translations if you would like to use the plugin in another not yet included language.
+
+## Changelog
+
+[Changelog](CHANGELOG.md)

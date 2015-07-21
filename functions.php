@@ -1,11 +1,11 @@
 <?php # -*- coding: utf-8 -*-
 
-use tf\MetaTaxonomy\Model\Taxonomy;
+use tf\MetaTaxonomy\Models\Taxonomy;
 
 if ( ! function_exists( 'has_meta_term' ) ) {
 
 	/**
-	 * Check if the post for the given ID has the meta term for the given ID or slug.
+	 * Check if the post with the given ID has the meta term with the given ID or slug.
 	 *
 	 * @param int        $post_id Post ID.
 	 * @param int|string $term    Term ID or slug.

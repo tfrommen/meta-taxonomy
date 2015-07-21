@@ -5,7 +5,7 @@
  * Description: Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.
  * Author:      Thorsten Frommen
  * Author URI:  http://ipm-frommen.de/wordpress
- * Version:     1.0
+ * Version:     1.1
  * Text Domain: meta-taxonomy
  * Domain Path: /languages
  * License:     GPLv3

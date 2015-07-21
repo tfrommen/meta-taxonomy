@@ -1,11 +1,11 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace tf\MetaTaxonomy\Model;
+namespace tf\MetaTaxonomy\Models;
 
 /**
  * Class Taxonomy
  *
- * @package tf\MetaTaxonomy\Model
+ * @package tf\MetaTaxonomy\Models
  */
 class Taxonomy {
 
@@ -15,14 +15,12 @@ class Taxonomy {
 	private $name;
 
 	/**
-	 * Constructor. Init properties.
-	 *
-	 * @see tf\MetaTaxonomy\Controller\General::initialize()
+	 * Constructor. Set up the properties.
 	 */
 	public function __construct() {
 
 		/**
-		 * Customize the meta taxonomy's name.
+		 * Filter the meta taxonomy's name.
 		 *
 		 * @param string $name Taxonomy name.
 		 */
@@ -49,7 +47,7 @@ class Taxonomy {
 	public function register() {
 
 		/**
-		 * Customize the meta taxonomy's object type.
+		 * Filter the meta taxonomy's object type.
 		 *
 		 * @param string|array $object_type Taxonomy object type.
 		 */
@@ -75,7 +73,7 @@ class Taxonomy {
 			'not_found'                  => __( 'No metas found.', 'meta-taxonomy' ),
 		);
 		/**
-		 * Customize the meta taxonomy's labels.
+		 * Filter the meta taxonomy's labels.
 		 *
 		 * @param array $labels Taxonomy labels.
 		 */
@@ -86,7 +84,7 @@ class Taxonomy {
 			'meta-taxonomy'
 		);
 		/**
-		 * Customize the meta taxonomy's description.
+		 * Filter the meta taxonomy's description.
 		 *
 		 * @param string $description Taxonomy description.
 		 */
@@ -99,7 +97,7 @@ class Taxonomy {
 			'assign_terms' => 'edit_posts',
 		);
 		/**
-		 * Customize the meta taxonomy's capabilities.
+		 * Filter the meta taxonomy's capabilities.
 		 *
 		 * @param array $capabilities Taxonomy capabilities.
 		 */
@@ -119,7 +117,7 @@ class Taxonomy {
 			'rewrite'            => FALSE,
 		);
 		/**
-		 * Customize the meta taxonomy's args.
+		 * Filter the meta taxonomy's args.
 		 *
 		 * @param array $args Taxonomy args.
 		 */

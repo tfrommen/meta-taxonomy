@@ -2,9 +2,6 @@
 
 namespace tf\MetaTaxonomy;
 
-use tf\MetaTaxonomy\Controller;
-use tf\MetaTaxonomy\Model;
-
 /**
  * Class Plugin
  *
@@ -18,9 +15,7 @@ class Plugin {
 	private $file;
 
 	/**
-	 * Constructor. Init properties.
-	 *
-	 * @see init()
+	 * Constructor. Set up the properties.
 	 *
 	 * @param string $file Main plugin file.
 	 */
@@ -30,19 +25,19 @@ class Plugin {
 	}
 
 	/**
-	 * Initialize the controller.
-	 *
-	 * @see initialize()
+	 * Initialize the plugin.
 	 *
 	 * @return void
 	 */
 	public function initialize() {
 
-		$text_domain = new Model\TextDomain( $this->file );
+		$text_domain = new Models\TextDomain( $this->file );
 		$text_domain->load();
 
-		$general_controller = new Controller\General();
-		$general_controller->initialize();
+		$taxonomy = new Models\Taxonomy();
+
+		$taxonomy_controller = new Controllers\Taxonomy( $taxonomy );
+		$taxonomy_controller->initialize();
 	}
 
 }

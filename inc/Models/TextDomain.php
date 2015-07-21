@@ -1,13 +1,18 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace tf\MetaTaxonomy\Model;
+namespace tf\MetaTaxonomy\Models;
 
 /**
  * Class TextDomain
  *
- * @package tf\MetaTaxonomy\Model
+ * @package tf\MetaTaxonomy\Models
  */
 class TextDomain {
+
+	/**
+	 * @var string
+	 */
+	private $domain = 'meta-taxonomy';
 
 	/**
 	 * @var string
@@ -15,9 +20,7 @@ class TextDomain {
 	private $path;
 
 	/**
-	 * Constructor. Set up properties.
-	 *
-	 * @see tf\MetaTaxonomy\Plugin::initialize()
+	 * Constructor. Set up the properties.
 	 *
 	 * @param string $file Main plugin file.
 	 */
@@ -28,15 +31,13 @@ class TextDomain {
 	}
 
 	/**
-	 * Load text domain.
+	 * Load the text domain.
 	 *
-	 * @see tf\MetaTaxonomy\Controller\Admin::initialize()
-	 *
-	 * @return void
+	 * @return bool
 	 */
 	public function load() {
 
-		load_plugin_textdomain( 'meta-taxonomy', FALSE, $this->path );
+		return load_plugin_textdomain( $this->domain, FALSE, $this->path );
 	}
 
 }
