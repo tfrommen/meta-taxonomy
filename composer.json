@@ -1,0 +1,19 @@
+{
+	"name": "tfrommen/meta-taxonomy",
+	"description": "Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.",
+	"homepage": "https://github.com/tfrommen/meta-taxonomy",
+	"license": "GPL-3.0",
+	"authors": [
+		{
+			"name": "Thorsten Frommen",
+			"email": "tf@ipm-frommen.de",
+			"homepage": "http://ipm-frommen.de/wordpress"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"require-dev": {
+		"10up/wp_mock": "dev-master"
+	}
+}
