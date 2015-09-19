@@ -1,13 +1,13 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace tf\MetaTaxonomy\Controllers;
+namespace tfrommen\MetaTaxonomy\Controllers;
 
-use tf\MetaTaxonomy\Models\Taxonomy as Model;
+use tfrommen\MetaTaxonomy\Models\Taxonomy as Model;
 
 /**
- * Class Taxonomy
+ * Taxonomy controller.
  *
- * @package tf\MetaTaxonomy\Controllers
+ * @package tfrommen\MetaTaxonomy\Controllers
  */
 class Taxonomy {
 

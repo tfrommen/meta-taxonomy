@@ -1,5 +1,10 @@
 # Meta Taxonomy
 
+[![Latest Stable Version](https://poser.pugx.org/tfrommen/meta-taxonomy/v/stable)](https://packagist.org/packages/tfrommen/meta-taxonomy)
+[![Project Status](http://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
+[![Build Status](https://travis-ci.org/tfrommen/meta-taxonomy.svg?branch=master)](http://travis-ci.org/tfrommen/meta-taxonomy)
+[![License](https://poser.pugx.org/tfrommen/meta-taxonomy/license)](https://packagist.org/packages/tfrommen/meta-taxonomy)
+
 Have you ever wanted to query posts based on the condition that a specific meta is set or equal to a given value, but then you heard/learnt how inefficient a (complex) meta query actually is?
 
 This is exactly when _Meta Taxonomy_ kicks in.
@@ -11,7 +16,7 @@ This is exactly when _Meta Taxonomy_ kicks in.
 1. [Download ZIP](https://github.com/tfrommen/meta-taxonomy/archive/master.zip).
 1. Upload contents to the `/wp-content/plugins` directory on your web server.
 1. Activate the plugin through the _Plugins_ menu in WordPress.
-1. Be impressed by how fast your _meta tax_ queries can get, compared to ordinary meta queries.
+1. Be impressed by how fast your _meta-tax_ queries can get, compared to ordinary meta queries.
 
 ## Usage
 
@@ -27,9 +32,11 @@ If you want to alter a specific taxonomy argument but you can't find a fitting f
 
 ```php
 /**
- * Filter the meta taxonomy's args.
+ * Filter the taxonomy args.
  *
  * @param array $args Taxonomy args.
+ *
+ * @return array
  */
 add_filter( 'meta_taxonomy_args', function( $args ) {
 
@@ -46,9 +53,11 @@ This filter provides you with the the capabilities required for the four taxonom
 
 ```php
 /**
- * Filter the meta taxonomy's capabilities.
+ * Filter the taxonomy capabilities.
  *
  * @param array $capabilities Taxonomy capabilities.
+ *
+ * @return array
  */
 add_filter( 'meta_taxonomy_capabilities', function( $capabilities ) {
 
@@ -65,9 +74,11 @@ If you want to alter the taxonomy description, feel free to do it via this filte
 
 ```php
 /**
- * Filter the meta taxonomy's description.
+ * Filter the taxonomy description.
  *
  * @param string $description Taxonomy description.
+ *
+ * @return string
  */
 add_filter( 'meta_taxonomy_description', function() {
 
@@ -82,9 +93,11 @@ In case you don't like the labels, easily adapt them to your liking.
 
 ```php
 /**
- * Filter the meta taxonomy's labels.
+ * Filter the taxonomy labels.
  *
  * @param array $labels Taxonomy labels.
+ *
+ * @return array
  */
 add_filter( 'meta_taxonomy_labels', function( $labels ) {
 	
@@ -101,9 +114,11 @@ Yes, you can also alter the taxonomy name (slug).
 
 ```php
 /**
- * Filter the meta taxonomy's name.
+ * Filter the taxonomy name.
  *
  * @param string $name Taxonomy name.
+ *
+ * @return string
  */
 add_filter( 'meta_taxonomy_name', function() {
 	
@@ -118,9 +133,11 @@ By default, the meta taxonomy is registered for default posts (i.e., post type `
 
 ```php
 /**
- * Filter the meta taxonomy's object type.
+ * Filter the taxonomy object type.
  *
  * @param string|array $object_type Taxonomy object type.
+ *
+ * @return string|array
  */
 add_filter( 'meta_taxonomy_object_type', function( $object_type ) {
 	

@@ -1,0 +1,34 @@
+{
+	"name": "meta-taxonomy",
+	"version": "1.4.0",
+	"description": "Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.",
+	"keywords": [
+		"meta",
+		"post",
+		"posts",
+		"taxonomies",
+		"taxonomy",
+		"term",
+		"terms"
+	],
+	"homepage": "https://github.com/tfrommen/meta-taxonomy",
+	"bugs": "https://github.com/tfrommen/meta-taxonomy/issues",
+	"license": "GPL-3.0",
+	"author": {
+		"name": "Thorsten Frommen",
+		"email": "info@tfrommen.de",
+		"url": "http://tfrommen.de"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tfrommen/meta-taxonomy"
+	},
+	"devDependencies": {
+		"grunt": "^0.4.5",
+		"grunt-contrib-jshint": "^0.11.2",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-glotpress": "^0.2.1",
+		"grunt-wp-i18n": "^0.5.2",
+		"load-grunt-tasks": "^3.2.0"
+	}
+}

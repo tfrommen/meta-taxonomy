@@ -1,15 +1,20 @@
 <?php # -*- coding: utf-8 -*-
 
-use tf\MetaTaxonomy\Controllers\Taxonomy as Testee;
+use tfrommen\MetaTaxonomy\Controllers\Taxonomy as Testee;
 use WP_Mock\Tools\TestCase;
 
 class TaxonomyControllerTest extends TestCase {
 
+	/**
+	 * @covers tfrommen\MetaTaxonomy\Controllers\Taxonomy::initialize
+	 *
+	 * @return void
+	 */
 	public function test_initialize() {
 
-		$model = Mockery::mock( 'tf\MetaTaxonomy\Models\Taxonomy' );
+		/** @var tfrommen\MetaTaxonomy\Models\Taxonomy $model */
+		$model = Mockery::mock( 'tfrommen\MetaTaxonomy\Models\Taxonomy' );
 
-		/** @var tf\MetaTaxonomy\Models\Taxonomy $model */
 		$testee = new Testee( $model );
 
 		WP_Mock::expectActionAdded( 'wp_loaded', array( $model, 'register' ) );

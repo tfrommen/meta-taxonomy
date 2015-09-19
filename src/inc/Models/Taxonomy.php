@@ -1,11 +1,11 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace tf\MetaTaxonomy\Models;
+namespace tfrommen\MetaTaxonomy\Models;
 
 /**
- * Class Taxonomy
+ * Taxonomy model.
  *
- * @package tf\MetaTaxonomy\Models
+ * @package tfrommen\MetaTaxonomy\Models
  */
 class Taxonomy {
 
@@ -20,15 +20,17 @@ class Taxonomy {
 	public function __construct() {
 
 		/**
-		 * Filter the meta taxonomy's name.
+		 * Filter the taxonomy name.
 		 *
 		 * @param string $name Taxonomy name.
+		 *
+		 * @return string
 		 */
 		$this->name = apply_filters( 'meta_taxonomy_name', 'meta' );
 	}
 
 	/**
-	 * Return taxonomy name.
+	 * Return the taxonomy name.
 	 *
 	 * @return string
 	 */
@@ -47,9 +49,11 @@ class Taxonomy {
 	public function register() {
 
 		/**
-		 * Filter the meta taxonomy's object type.
+		 * Filter the taxonomy object type.
 		 *
 		 * @param string|array $object_type Taxonomy object type.
+		 *
+		 * @return string|array
 		 */
 		$object_type = apply_filters( 'meta_taxonomy_object_type', 'post' );
 
@@ -73,7 +77,7 @@ class Taxonomy {
 			'not_found'                  => __( 'No metas found.', 'meta-taxonomy' ),
 		);
 		/**
-		 * Filter the meta taxonomy's labels.
+		 * Filter the taxonomy labels.
 		 *
 		 * @param array $labels Taxonomy labels.
 		 */
@@ -84,7 +88,7 @@ class Taxonomy {
 			'meta-taxonomy'
 		);
 		/**
-		 * Filter the meta taxonomy's description.
+		 * Filter the taxonomy description.
 		 *
 		 * @param string $description Taxonomy description.
 		 */
@@ -97,7 +101,7 @@ class Taxonomy {
 			'assign_terms' => 'edit_posts',
 		);
 		/**
-		 * Filter the meta taxonomy's capabilities.
+		 * Filter the taxonomy capabilities.
 		 *
 		 * @param array $capabilities Taxonomy capabilities.
 		 */
@@ -117,7 +121,7 @@ class Taxonomy {
 			'rewrite'            => FALSE,
 		);
 		/**
-		 * Filter the meta taxonomy's args.
+		 * Filter the taxonomy args.
 		 *
 		 * @param array $args Taxonomy args.
 		 */

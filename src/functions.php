@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-use tf\MetaTaxonomy\Models\Taxonomy;
+use tfrommen\MetaTaxonomy\Models\Taxonomy;
 
 if ( ! function_exists( 'has_meta_term' ) ) {
 
@@ -15,9 +15,8 @@ if ( ! function_exists( 'has_meta_term' ) ) {
 	function has_meta_term( $post_id, $term ) {
 
 		$taxonomy = new Taxonomy();
-		$taxonomy = $taxonomy->get_name();
 
-		return is_object_in_term( $post_id, $taxonomy, $term );
+		return is_object_in_term( $post_id, $taxonomy->get_name(), $term );
 	}
 
 }

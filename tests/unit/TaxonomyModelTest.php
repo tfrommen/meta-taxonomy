@@ -1,10 +1,15 @@
 <?php # -*- coding: utf-8 -*-
 
-use tf\MetaTaxonomy\Models\Taxonomy as Testee;
+use tfrommen\MetaTaxonomy\Models\Taxonomy as Testee;
 use WP_Mock\Tools\TestCase;
 
 class TaxonomyModelTest extends TestCase {
 
+	/**
+	 * @covers tfrommen\MetaTaxonomy\Models\Taxonomy::register
+	 *
+	 * @return void
+	 */
 	public function test_register() {
 
 		$testee = new Testee();
