@@ -20,7 +20,7 @@ This is exactly when _Meta Taxonomy_ kicks in.
 
 ## Usage
 
-To be honest, this plugin is no big deal. It just provides you with a one-click solution for using high-performance taxonomy-based meta-like queries. Once the plugin is activated, you can assign terms of the new meta taxonomy to your posts, and then query the posts in a highly efficnet way (compared to complex meta queries).
+To be honest, this plugin is no big deal. It just provides you with a one-click solution for using high-performance taxonomy-based meta-like queries. Once the plugin is activated, you can assign terms of the new meta taxonomy to your posts, and then query the posts in a highly efficient way (compared to meta queries).
 
 ### Filters
 
@@ -123,14 +123,14 @@ By default, the meta taxonomy is registered for default posts (i.e., post type `
 
 ```php
 /**
- * Filters the taxonomy object type.
+ * Filters the taxonomy object types.
  *
- * @param string|string[] $object_type Taxonomy object type.
+ * @param string[] $object_types Array of names of object types for the taxonomy.
  */
-add_filter( 'meta_taxonomy_object_type', function( $object_type ) {
+add_filter( 'meta_taxonomy_object_types', function( $object_types ) {
 	
 	// Add the taxonomy for pages and a CPT, too
-	return array_unique( array_merge( (array) $object_type, array(
+	return array_unique( array_merge( (array) $object_types, array(
 			'page',
 			'my_cpt',
 	) ) );
