@@ -32,11 +32,9 @@ If you want to alter a specific taxonomy argument but you can't find a fitting f
 
 ```php
 /**
- * Filter the taxonomy args.
+ * Filters the taxonomy args.
  *
  * @param array $args Taxonomy args.
- *
- * @return array
  */
 add_filter( 'meta_taxonomy_args', function( $args ) {
 
@@ -53,11 +51,9 @@ This filter provides you with the the capabilities required for the four taxonom
 
 ```php
 /**
- * Filter the taxonomy capabilities.
+ * Filters the taxonomy capabilities.
  *
- * @param array $capabilities Taxonomy capabilities.
- *
- * @return array
+ * @param string[] $capabilities Taxonomy capabilities.
  */
 add_filter( 'meta_taxonomy_capabilities', function( $capabilities ) {
 
@@ -74,11 +70,9 @@ If you want to alter the taxonomy description, feel free to do it via this filte
 
 ```php
 /**
- * Filter the taxonomy description.
+ * Filters the taxonomy description.
  *
  * @param string $description Taxonomy description.
- *
- * @return string
  */
 add_filter( 'meta_taxonomy_description', function() {
 
@@ -93,11 +87,9 @@ In case you don't like the labels, easily adapt them to your liking.
 
 ```php
 /**
- * Filter the taxonomy labels.
+ * Filters the taxonomy labels.
  *
- * @param array $labels Taxonomy labels.
- *
- * @return array
+ * @param string[] $labels Taxonomy labels.
  */
 add_filter( 'meta_taxonomy_labels', function( $labels ) {
 	
@@ -114,16 +106,14 @@ Yes, you can also alter the taxonomy name (slug).
 
 ```php
 /**
- * Filter the taxonomy name.
+ * Filters the taxonomy name.
  *
  * @param string $name Taxonomy name.
- *
- * @return string
  */
 add_filter( 'meta_taxonomy_name', function() {
 	
-	// A little more horro, please...
-	return 'meta_terms';
+	// Rename it
+	return 'meta_term';
 } );
 ```
 
@@ -133,11 +123,9 @@ By default, the meta taxonomy is registered for default posts (i.e., post type `
 
 ```php
 /**
- * Filter the taxonomy object type.
+ * Filters the taxonomy object type.
  *
- * @param string|array $object_type Taxonomy object type.
- *
- * @return string|array
+ * @param string|string[] $object_type Taxonomy object type.
  */
 add_filter( 'meta_taxonomy_object_type', function( $object_type ) {
 	

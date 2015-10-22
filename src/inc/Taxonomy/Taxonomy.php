@@ -1,11 +1,11 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace tfrommen\MetaTaxonomy\Models;
+namespace tfrommen\MetaTaxonomy\Taxonomy;
 
 /**
  * Taxonomy model.
  *
- * @package tfrommen\MetaTaxonomy\Models
+ * @package tfrommen\MetaTaxonomy\Taxonomy
  */
 class Taxonomy {
 
@@ -15,22 +15,20 @@ class Taxonomy {
 	private $name;
 
 	/**
-	 * Constructor. Set up the properties.
+	 * Constructor. Sets up the properties.
 	 */
 	public function __construct() {
 
 		/**
-		 * Filter the taxonomy name.
+		 * Filters the taxonomy name.
 		 *
 		 * @param string $name Taxonomy name.
-		 *
-		 * @return string
 		 */
-		$this->name = apply_filters( 'meta_taxonomy_name', 'meta' );
+		$this->name = (string) apply_filters( 'meta_taxonomy_name', 'meta' );
 	}
 
 	/**
-	 * Return the taxonomy name.
+	 * Returns the taxonomy name.
 	 *
 	 * @return string
 	 */
@@ -40,7 +38,7 @@ class Taxonomy {
 	}
 
 	/**
-	 * Register the taxonomy.
+	 * Registers the taxonomy.
 	 *
 	 * @wp-hook wp_loaded
 	 *
@@ -49,13 +47,11 @@ class Taxonomy {
 	public function register() {
 
 		/**
-		 * Filter the taxonomy object type.
+		 * Filters the taxonomy object types.
 		 *
-		 * @param string|array $object_type Taxonomy object type.
-		 *
-		 * @return string|array
+		 * @param string[] $object_types Array of names of object types for the taxonomy.
 		 */
-		$object_type = apply_filters( 'meta_taxonomy_object_type', 'post' );
+		$object_types = (array) apply_filters( 'meta_taxonomy_object_types', array( 'post' ) );
 
 		$labels = array(
 			'name'                       => _x( 'Metas', 'Taxonomy general name', 'meta-taxonomy' ),
@@ -77,22 +73,22 @@ class Taxonomy {
 			'not_found'                  => __( 'No metas found.', 'meta-taxonomy' ),
 		);
 		/**
-		 * Filter the taxonomy labels.
+		 * Filters the taxonomy labels.
 		 *
-		 * @param array $labels Taxonomy labels.
+		 * @param string[] $labels Taxonomy labels.
 		 */
-		$labels = apply_filters( 'meta_taxonomy_labels', $labels );
+		$labels = (array) apply_filters( 'meta_taxonomy_labels', $labels );
 
 		$description = __(
 			'This taxonomy provides a high-performance means to query posts in a somewhat meta-based way.',
 			'meta-taxonomy'
 		);
 		/**
-		 * Filter the taxonomy description.
+		 * Filters the taxonomy description.
 		 *
 		 * @param string $description Taxonomy description.
 		 */
-		$description = apply_filters( 'meta_taxonomy_description', $description );
+		$description = (string) apply_filters( 'meta_taxonomy_description', $description );
 
 		$capabilities = array(
 			'manage_terms' => 'manage_options',
@@ -101,11 +97,11 @@ class Taxonomy {
 			'assign_terms' => 'edit_posts',
 		);
 		/**
-		 * Filter the taxonomy capabilities.
+		 * Filters the taxonomy capabilities.
 		 *
-		 * @param array $capabilities Taxonomy capabilities.
+		 * @param string[] $capabilities Taxonomy capabilities.
 		 */
-		$capabilities = apply_filters( 'meta_taxonomy_capabilities', $capabilities );
+		$capabilities = (array) apply_filters( 'meta_taxonomy_capabilities', $capabilities );
 
 		$args = array(
 			'labels'             => $labels,
@@ -121,13 +117,13 @@ class Taxonomy {
 			'rewrite'            => FALSE,
 		);
 		/**
-		 * Filter the taxonomy args.
+		 * Filters the taxonomy args.
 		 *
-		 * @param array $args Taxonomy args.
+		 * @param array|string $args Taxonomy args.
 		 */
 		$args = apply_filters( 'meta_taxonomy_args', $args );
 
-		register_taxonomy( $this->name, $object_type, $args );
+		register_taxonomy( $this->name, $object_types, $args );
 	}
 
 }

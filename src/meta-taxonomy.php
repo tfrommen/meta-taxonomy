@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Meta Taxonomy
  * Plugin URI:  https://github.com/tfrommen/meta-taxonomy
- * Description: Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.
+ * Description: This plugin registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.
  * Author:      Thorsten Frommen
  * Author URI:  http://tfrommen.de
- * Version:     1.2.0
+ * Version:     1.3.0
  * Text Domain: meta-taxonomy
  * Domain Path: /languages
  * License:     GPLv3
@@ -13,20 +13,14 @@
 
 namespace tfrommen\MetaTaxonomy;
 
-use tfrommen\Autoloader;
-
 if ( ! function_exists( 'add_action' ) ) {
 	return;
 }
 
-require_once __DIR__ . '/inc/Autoloader/bootstrap.php';
-
-require_once __DIR__ . '/functions.php';
-
 add_action( 'plugins_loaded', __NAMESPACE__ . '\initialize' );
 
 /**
- * Initialize the plugin.
+ * Initializes the plugin.
  *
  * @wp-hook plugins_loaded
  *
@@ -34,9 +28,14 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\initialize' );
  */
 function initialize() {
 
-	$autoloader = new Autoloader\Autoloader();
-	$autoloader->add_rule( new Autoloader\NamespaceRule( __DIR__ . '/inc', __NAMESPACE__ ) );
+	if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+		require_once __DIR__ . '/vendor/autoload.php';
+	}
 
 	$plugin = new Plugin( __FILE__ );
 	$plugin->initialize();
+}
+
+if ( file_exists( __DIR__ . '/functions.php' ) ) {
+	include_once __DIR__ . '/functions.php';
 }

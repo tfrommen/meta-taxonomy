@@ -1,4 +1,6 @@
+/* globals module, require */
 module.exports = function( grunt ) {
+	'use strict';
 
 	var configObject = {
 		config: {
@@ -26,6 +28,9 @@ module.exports = function( grunt ) {
 
 		// https://github.com/gruntjs/grunt-contrib-jshint
 		jshint: {
+			options: {
+				jshintrc: true
+			},
 			grunt: {
 				src: [ 'Gruntfile.js' ]
 			}
@@ -56,6 +61,10 @@ module.exports = function( grunt ) {
 
 						// Skip translations with the above defined meta comments
 						for ( var translation in pot.translations[ '' ] ) {
+							if ( !pot.translations[ '' ].hasOwnProperty( translation ) ) {
+								continue;
+							}
+
 							if ( 'undefined' === typeof pot.translations[ '' ][ translation ].comments.extracted ) {
 								continue;
 							}

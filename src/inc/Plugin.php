@@ -3,7 +3,7 @@
 namespace tfrommen\MetaTaxonomy;
 
 /**
- * Class Plugin
+ * Main controller.
  *
  * @package tfrommen\MetaTaxonomy
  */
@@ -20,7 +20,7 @@ class Plugin {
 	private $plugin_data;
 
 	/**
-	 * Constructor. Set up the properties.
+	 * Constructor. Sets up the properties.
 	 *
 	 * @param string $file Main plugin file.
 	 */
@@ -37,25 +37,19 @@ class Plugin {
 	}
 
 	/**
-	 * Initialize the plugin.
+	 * Initializes the plugin.
 	 *
 	 * @return void
 	 */
 	public function initialize() {
 
-		$update_controller = new Controllers\Update( $this->plugin_data[ 'version' ] );
-		$update_controller->update();
+		$updater = new Update\Updater( $this->plugin_data[ 'version' ] );
+		$updater->update();
 
-		$text_domain = new Models\TextDomain(
-			$this->file,
-			$this->plugin_data[ 'text_domain' ],
-			$this->plugin_data[ 'domain_path' ]
-		);
+		$text_domain = new L10n\TextDomain( $this->plugin_data, $this->file );
 		$text_domain->load();
 
-		$taxonomy = new Models\Taxonomy();
-
-		$taxonomy_controller = new Controllers\Taxonomy( $taxonomy );
+		$taxonomy_controller = new Taxonomy\Controller( new Taxonomy\Taxonomy() );
 		$taxonomy_controller->initialize();
 	}
 

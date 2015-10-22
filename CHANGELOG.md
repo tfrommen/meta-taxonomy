@@ -1,3 +1,9 @@
+## 1.3.0
+* Use composer autoload.
+* Refactor namespaces.
+* Improve plugin uninstall.
+* Improve and complete tests.
+
 ## 1.2.0
 * Improve file structure.
 * Add Travis, Grunt and license files.

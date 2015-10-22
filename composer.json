@@ -1,6 +1,6 @@
 {
 	"name": "tfrommen/meta-taxonomy",
-	"description": "Registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.",
+	"description": "This plugin registers a taxonomy that provides a high-performance means to query posts in a somewhat meta-based way.",
 	"type": "wordpress-plugin",
 	"keywords": [
 		"meta",
@@ -26,7 +26,7 @@
 		"source": "https://github.com/tfrommen/meta-taxonomy"
 	},
 	"require": {
-		"php": ">=5.2.4",
+		"php": ">=5.3.0",
 		"composer/installers": "~1.0"
 	},
 	"require-dev": {
@@ -35,9 +35,14 @@
 		"mockery/mockery": "~0.9.4",
 		"phpunit/phpunit": "~4.0"
 	},
+	"autoload": {
+		"psr-4": {
+			"tfrommen\\MetaTaxonomy\\": "src/inc/"
+		}
+	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "1.3.x-dev"
+			"dev-master": "1.4.x-dev"
 		}
 	}
 }

@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-use tfrommen\MetaTaxonomy\Models\Taxonomy;
+use tfrommen\MetaTaxonomy\Taxonomy\Taxonomy;
 
 if ( ! function_exists( 'has_meta_term' ) ) {
 
@@ -8,7 +8,7 @@ if ( ! function_exists( 'has_meta_term' ) ) {
 	 * Check if the post with the given ID has the meta term with the given ID or slug.
 	 *
 	 * @param int        $post_id Post ID.
-	 * @param int|string $term    Term ID or slug.
+	 * @param int|string $term    Meta term ID or slug.
 	 *
 	 * @return bool
 	 */

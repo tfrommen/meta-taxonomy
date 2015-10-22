@@ -1,15 +1,27 @@
 <?php # -*- coding: utf-8 -*-
 
-use tfrommen\MetaTaxonomy\Controllers\Update as Testee;
+use tfrommen\MetaTaxonomy\Update\Updater as Testee;
 use WP_Mock\Tools\TestCase;
 
 /**
- * Test case for the UpdateController class.
+ * Test case for the Updater class.
  */
-class UpdateControllerTest extends TestCase {
+class UpdaterTest extends TestCase {
 
 	/**
-	 * @covers       tfrommen\MetaTaxonomy\Controllers\Update::update
+	 * @covers tfrommen\MetaTaxonomy\Update\Updater::get_option_name
+	 *
+	 * @return void
+	 */
+	public function test_get_option_name() {
+
+		$testee = new Testee();
+
+		$this->assertSame( 'meta_taxonomy_version', $testee->get_option_name() );
+	}
+
+	/**
+	 * @covers       tfrommen\MetaTaxonomy\Update\Updater::update
 	 * @dataProvider provide_update_data
 	 *
 	 * @param bool   $expected
@@ -54,7 +66,7 @@ class UpdateControllerTest extends TestCase {
 	/**
 	 * Provider for the test_update() method.
 	 *
-	 * @return array
+	 * @return array[]
 	 */
 	public function provide_update_data() {
 
