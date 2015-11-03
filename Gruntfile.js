@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
 			options: {
 				jshintrc: true
 			},
-			grunt: {
+			grunt  : {
 				src: [ 'Gruntfile.js' ]
 			}
 		},
@@ -56,7 +56,7 @@ module.exports = function( grunt ) {
 							'Plugin URI of the plugin/theme',
 							'Author of the plugin/theme',
 							'Author URI of the plugin/theme',
-						    'translators: do not translate'
+							'translators: do not translate'
 						];
 
 						// Skip translations with the above defined meta comments

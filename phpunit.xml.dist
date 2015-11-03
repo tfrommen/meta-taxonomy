@@ -9,7 +9,15 @@
 	>
 	<testsuites>
 		<testsuite name="unit">
-			<directory suffix="Test.php">tests/phpunit/tests</directory>
+			<directory suffix="Test.php">tests/phpunit/unit</directory>
 		</testsuite>
 	</testsuites>
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">src/inc</directory>
+			<exclude>
+				<file>src/inc/Plugin.php</file>
+			</exclude>
+		</whitelist>
+	</filter>
 </phpunit>

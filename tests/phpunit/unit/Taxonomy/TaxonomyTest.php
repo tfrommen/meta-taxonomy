@@ -1,10 +1,14 @@
 <?php # -*- coding: utf-8 -*-
 
+namespace tfrommen\Tests\MetaTaxonomy\Taxonomy;
+
+use Mockery;
 use tfrommen\MetaTaxonomy\Taxonomy\Taxonomy as Testee;
+use WP_Mock;
 use WP_Mock\Tools\TestCase;
 
 /**
- * Test case for the Taxonomy class.
+ * Test case for the taxonomy model.
  */
 class TaxonomyTest extends TestCase {
 
@@ -55,10 +59,9 @@ class TaxonomyTest extends TestCase {
 		WP_Mock::wpFunction(
 			'register_taxonomy',
 			array(
-				'times' => 1,
-				'args'  => array(
+				'args' => array(
 					'meta',
-					Mockery::type( 'array' ),
+					array( 'post' ),
 					Mockery::type( 'array' ),
 				),
 			)
