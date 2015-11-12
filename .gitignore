@@ -12,7 +12,6 @@
 
 # Composer
 vendor
-!src/vendor
 
 # Node
 node_modules

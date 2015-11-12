@@ -40,6 +40,11 @@
 			"tfrommen\\MetaTaxonomy\\": "src/inc/"
 		}
 	},
+	"scripts": {
+		"post-autoload-dump": [
+			"composer dump-autoload -d src"
+		]
+	},
 	"extra": {
 		"branch-alias": {
 			"dev-master": "1.4.x-dev"
